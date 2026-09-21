@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" fill="none" stroke="#3F4248" stroke-width="2.5" stroke-linecap="round">
+<path d="M120 520 L120 40"/>
+<path d="M120 360 C200.0 360 280 350 280 300 L280 40"/>
+<path d="M120 95 C200.0 95 280 85 280 35 L280 40"/>
+<path d="M300 520 L300 40"/>
+<path d="M300 210 C380.0 210 460 200 460 150 L460 40"/>
+<path d="M500 520 L500 40"/>
+<path d="M500 360 C580.0 360 660 350 660 300 L660 40"/>
+<path d="M500 95 C580.0 95 660 85 660 35 L660 40"/>
+<path d="M720 520 L720 40"/>
+<path d="M720 210 C800.0 210 880 200 880 150 L880 40"/>
+<path d="M940 520 L940 40"/>
+<path d="M940 360 C1020.0 360 1100 350 1100 300 L1100 40"/>
+<path d="M940 95 C1020.0 95 1100 85 1100 35 L1100 40"/>
+<path d="M1180 520 L1180 40"/>
+<path d="M1180 210 C1260.0 210 1340 200 1340 150 L1340 40"/>
+<path d="M1420 520 L1420 40"/>
+<circle cx="120" cy="360" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="280" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="120" cy="95" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="280" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="120" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="300" cy="210" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="460" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="300" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="500" cy="360" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="660" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="500" cy="95" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="660" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="500" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="720" cy="210" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="880" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="720" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="940" cy="360" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1100" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="940" cy="95" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1100" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="940" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1180" cy="210" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1340" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1180" cy="40" r="8" fill="#3F4248" stroke="none"/>
+<circle cx="1420" cy="40" r="8" fill="#3F4248" stroke="none"/>
+</svg>

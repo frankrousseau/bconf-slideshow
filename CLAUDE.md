@@ -1,6 +1,6 @@
-# FMX 2026 — Kitsu booth slideshow
+# Blender Conference 2026 — Kitsu booth slideshow
 
-Single-file HTML slideshow that loops on the booth screen at FMX (Stuttgart, May 5-7, 2026). CGWire shows it between live demos of Kitsu (open-source production tracking for animation and VFX studios).
+Single-file HTML slideshow that loops on the booth screen at Blender Conference 2026 (Amsterdam). Adapted from the MIFA 2026 deck (`index-prev.html` is older still). CGWire shows it between live demos of Kitsu (open-source production tracking for animation and VFX studios).
 
 ## Files
 
@@ -13,29 +13,35 @@ Single-file HTML slideshow that loops on the booth screen at FMX (Stuttgart, May
 
 Open `index.html` in Chrome or Firefox. Press `F` for fullscreen.
 
-- Auto-advances every 10 seconds, loops forever
+- Auto-advances per slide (`data-duration` in seconds, fallback 10), loops forever. `#N` in the URL opens slide N.
 - 600ms crossfade between slides
-- Persistent chrome at the top: Kitsu badge + `FMX 2026 · Stuttgart · Booth 1.4`
-- Bottom footer: thin green progress bar, `01 / 13` counter, dot indicators, "Auto-advance · 10s" label
+- Persistent chrome at the top: Kitsu badge + `Blender Conference 2026 - Amsterdam` (no booth number)
+- Bottom footer: thin green progress bar, `01 / 19` counter (computed from the DOM), dot indicators, "Auto-advance · 10s" label
 - Keyboard: `F` fullscreen, `Space` pause, `←` / `→` (or PageUp/PageDown) navigate, `Home` restart
 
-## Slide order (13 slides)
+## Slide order (19 slides)
 
-Each content slide has an **eyebrow** (small uppercase green label) above an **h1** with one accented phrase wrapped in `<em>` (rendered green, not italic).
+Each content slide has an **eyebrow** (small uppercase green label) above a single-color **h1**. The `<em>` tags left in h1s are neutralized in CSS (`color: inherit`): no two-tone titles, and no middle dots as separators (use a hyphen), both read as AI-generated. `data-slide` ids are historical and not in display order; DOM order is what plays.
 
-1. Logo — Kitsu mark + wordmark + green divider + tagline "Production Tracking · Animation & VFX"
-2. "The Reality Today" / "Productions are getting more complex" — 2x2 grid with icon + label + sub (Tighter budgets / Shorter deadlines / Remote teams / Multi-studio projects)
-3. "An unified workspace" — UI screenshot (with detailed mock-UI fallback behind)
-4. "Built-in review" / "Powered by a review engine" — review-engine screenshot (with simple play-icon fallback behind)
-5. "Smart scheduling" / "Plan and reschedule, at a glance" — schedule screenshot (with simple calendar-icon fallback behind)
-6. "What we bring" / "Everything your studio needs, connected" — 3 feature cards with icon, title, description, tag pills (Review / Track / Connect)
-7. "Built for everyone" / "One tool, every role" — hexagon with 6 stakeholders (Production / Supervisors / Directors / Clients / Accounting / Artists) around the Kitsu mark
-8. "Multi-studio, by design" / "One backbone, many studios" — 3 hexagons (Studio One / Studio Two / Producer) meeting at the Kitsu mark, plus one-line caption
-9. "By the numbers" / "Trusted at every scale" — 3 stats: 400+ studios worldwide / 30 countries / 20k+ daily artists
-10. "Working studios" / "Studios that ship with Kitsu" — 4x3 logo grid
-11. "Selected productions" / "Recent shows, tracked in Kitsu" — 4 posters in a row
-12. "2026 release" / "What's new in Kitsu" — 3 news cards with NEW pill (Budget Management / Smart scheduling / Playlist 2.0)
-13. Contact — "Come Talk To Us" + "See Kitsu live, at the booth." + kitsu.cg-wire.com + green Booth 1.4 badge + QR
+1. Logo intro
+2. "The context changed" / "Animation productions changed" (2x2 grid)
+3. "Today" / "Production is scattered across a dozen tools"
+4. "New solution" / "A unified workspace" (screenshot)
+5. "Built-in review" / "Powered by a review engine" (screenshot)
+6. "Smart scheduling" / "And a planning system" (screenshot)
+7. "Open source" / "Run it your way" — cloud / on-premise / self-hosted + pills (AGPL license, GitHub stars, contributors, public roadmap). Moved up early for the Blender audience.
+8. "Blender pipeline" / "Made to work with Blender" — Blender add-on / Python API (Gazu) / Used by Blender Studio
+9. "Made with Kitsu and Blender" — posters (Flow, Unicorn Wars, Seven Bears, Woolly Woolly, Coop Troop, Wing It!)
+10. "Built for everyone" / "One tool, every role" (hexagon)
+11. "Multi-studio, by design" / "One backbone, many studios"
+12. "Infrastructure" / "Distributed by design"
+13. "Coming from spreadsheets?" / "Why teams switch"
+14. "Adoption" / "Grown by the community" (numbers)
+15. "Studios and schools" / "Teams that ship with Kitsu" (logo grid, Blender first)
+16. "The next generation" / "Students learn on Kitsu" (schools)
+17. "Selected at Annecy 2026" — posters
+18. "What's new in Kitsu" — Plugin System / Enhanced playlists / Smart scheduling
+19. Contact — "See Kitsu live, ask for a demo" + www.cg-wire.com/kitsu + QR
 
 ## Visual conventions
 
@@ -51,7 +57,7 @@ Authentic Kitsu / CGWire palette (don't substitute approximations):
 - No bullet points
 - No em dashes (use commas or periods)
 - Never mention competitors (Flow, ftrack, AYON, ShotGrid)
-- "Open source" can appear but is not central in this booth context
+- "Open source" is central for this audience (Blender Conference), state it plainly
 - Tone: factual and confident, not aggressive
 
 ## Asset placeholder pattern

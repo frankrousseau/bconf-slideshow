@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kitsu · MIFA 2026</title>
+  <title>Kitsu - Blender Conference 2026</title>
   <link rel="icon" type="image/svg+xml" href="./assets/kitsu.svg">
   <link rel="apple-touch-icon" href="./assets/kitsu.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,7 +141,7 @@
     }
     .slide h1 em {
       font-style: normal;
-      color: var(--green);
+      color: inherit;
     }
 
     @keyframes rise {
@@ -973,6 +973,21 @@
     }
     .slide-news > * { position: relative; z-index: 1; }
 
+    /* ---- Open-source slide: git branches forking upward, fading out at top ---- */
+    .slide-os { isolation: isolate; }
+    .slide-os::before {
+      content: '';
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 82%;
+      z-index: 0;
+      pointer-events: none;
+      background: url("./assets/branches.svg") center bottom / cover no-repeat;
+      opacity: 0.18;
+      -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+      mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+    }
+    .slide-os > * { position: relative; z-index: 1; }
+
     /* ---- Card lift on white background ---- */
     .feature-card, .news-item, .logo-cell, .keyword-grid {
       box-shadow: 0 6px 22px rgba(37,40,46,0.06);
@@ -1065,10 +1080,10 @@
         <img src="./assets/kitsu.svg">
       </div>
       <span>Kitsu</span>
-      <span class="brand-sep">·</span>
+      <span class="brand-sep">-</span>
       <span class="brand-tag">Production tracking for animation</span>
     </div>
-    <div class="meta"><em>MIFA 2026</em> &nbsp;·&nbsp; Annecy &nbsp;·&nbsp; Booth&nbsp;A.12</div>
+    <div class="meta"><em>Blender Conference 2026</em> &nbsp;-&nbsp; Amsterdam</div>
   </div>
 
   <!-- ============= SLIDE 1 — Logo ============= -->
@@ -1243,9 +1258,86 @@
   </section>
 
 
+  <!-- ============= SLIDE 8c — Open source ============= -->
+  <section class="slide slide-os" data-slide="8c" data-duration="9">
+    <div class="eyebrow">Open source</div>
+    <h1>Run it <em>your way</em></h1>
+    <div class="lead">You get your own instance, deployed however suits you.</div>
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: cloud -->
+          <svg viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        </div>
+        <h3>Our cloud</h3>
+        <div class="desc">Hosted and supported by us. Zero ops, always up to date.</div>
+        <div class="tags"><span>Managed</span><span>Always updated</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: building -->
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
+        </div>
+        <h3>On-premise</h3>
+        <div class="desc">On your own servers, behind your firewall.</div>
+        <div class="tags"><span>Your servers</span><span>Private</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: server -->
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg>
+        </div>
+        <h3>Self-hosted</h3>
+        <div class="desc">Spin it up yourself, you own the whole stack.</div>
+        <div class="tags"><span>You own it</span><span>Portable</span></div>
+      </div>
+    </div>
+    <div class="pill-row" style="margin-top: 38px">
+      <span>AGPL license</span>
+      <span><em>600+</em> GitHub stars</span>
+      <span><em>20+</em> contributors</span>
+      <span>Public roadmap</span>
+    </div>
+  </section>
+
+  <!-- ============= SLIDE 8e — Works with Blender ============= -->
+  <section class="slide" data-slide="8e" data-duration="11">
+    <div class="eyebrow">Blender pipeline</div>
+    <h1>Made to work with <em>Blender</em></h1>
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: puzzle -->
+          <svg viewBox="0 0 24 24"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77a.98.98 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.979.979 0 0 1 .276-.837l1.61-1.61a2.404 2.404 0 0 1 1.705-.707 2.402 2.402 0 0 1 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></svg>
+        </div>
+        <h3>Blender add-on</h3>
+        <div class="desc">Publish playblasts and follow your tasks without leaving Blender.</div>
+        <div class="tags"><span>Publish</span><span>In your viewport</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: terminal -->
+          <svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+        </div>
+        <h3>Python API</h3>
+        <div class="desc">Script your pipeline with Gazu, our Python client. Everything in Kitsu is reachable.</div>
+        <div class="tags"><span>Gazu</span><span>REST API</span></div>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap">
+          <!-- lucide: clapperboard -->
+          <svg viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+        </div>
+        <h3>Used by Blender Studio</h3>
+        <div class="desc">The open movies are tracked in Kitsu, from storyboard to final render.</div>
+        <div class="tags"><span>Open movies</span><span>Production proven</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============= SLIDE 11 — Posters ============= -->
   <section class="slide" data-slide="11" data-duration="7">
-    <div class="eyebrow">Made with Kitsu</div>
+    <div class="eyebrow">Made with Kitsu and Blender</div>
     <div class="poster-row six">
       <div class="poster" style="--ph-a:#2f6e7a;--ph-b:#0c1c20">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Feature</div></div><div class="silhouette"></div></div>
@@ -1254,8 +1346,8 @@
       </div>
       <div class="poster" style="--ph-a:#6e4a8a;--ph-b:#160e22">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Feature</div></div><div class="silhouette"></div></div>
-        <img src="./assets/poster-arco.jpg" alt="" onerror="this.remove()">
-        <div class="caption"><div class="title">Arco</div><div class="sub">2D feature</div></div>
+        <img src="./assets/poster-unicorn-wars.jpg" alt="" onerror="this.remove()">
+        <div class="caption"><div class="title">Unicorn Wars</div><div class="sub">2D feature</div></div>
       </div>
       <div class="poster" style="--ph-a:#5e4a2f;--ph-b:#1a140c">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Series</div></div><div class="silhouette"></div></div>
@@ -1264,8 +1356,8 @@
       </div>
       <div class="poster" style="--ph-a:#2f7a5e;--ph-b:#0c1a14">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Series</div></div><div class="silhouette"></div></div>
-        <img src="./assets/poster-wakfu.jpg" alt="" onerror="this.remove()">
-        <div class="caption"><div class="title">Wakfu</div><div class="sub">2D series</div></div>
+        <img src="./assets/poster-woolly-woolly.jpg" alt="" onerror="this.remove()">
+        <div class="caption"><div class="title">Woolly Woolly</div><div class="sub">3D series</div></div>
       </div>
       <div class="poster" style="--ph-a:#2f5e7a;--ph-b:#0c141a">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Series</div></div><div class="silhouette"></div></div>
@@ -1273,9 +1365,9 @@
         <div class="caption"><div class="title">Coop Troop</div><div class="sub">3D pre-school</div></div>
       </div>
       <div class="poster" style="--ph-a:#7a2f5e;--ph-b:#1a0c16">
-        <div class="placeholder"><div class="top"><div class="badge-tiny">Series</div></div><div class="silhouette"></div></div>
-        <img src="./assets/poster-totally-spies.jpg" alt="" onerror="this.remove()">
-        <div class="caption"><div class="title">Totally Spies</div><div class="sub">2D pre-school</div></div>
+        <div class="placeholder"><div class="top"><div class="badge-tiny">Short</div></div><div class="silhouette"></div></div>
+        <img src="./assets/poster-wing-it.jpg" alt="" onerror="this.remove()">
+        <div class="caption"><div class="title">Wing It!</div><div class="sub">3D short</div></div>
       </div>
     </div>
   </section>
@@ -1363,51 +1455,9 @@
     </div>
   </section>
 
-  <!-- ============= SLIDE 8c — Open source ============= -->
-  <section class="slide" data-slide="8c" data-duration="9">
-    <div class="eyebrow">No lock-in</div>
-    <h1>Run it <em>your way</em></h1>
-    <div class="lead">You get your own instance, deployed however suits you.</div>
-    <div class="features">
-      <div class="feature-card">
-        <div class="icon-wrap">
-          <!-- lucide: cloud -->
-          <svg viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-        </div>
-        <h3>Our cloud</h3>
-        <div class="desc">Hosted and supported by us. Zero ops, always up to date.</div>
-        <div class="tags"><span>Managed</span><span>Always updated</span></div>
-      </div>
-      <div class="feature-card">
-        <div class="icon-wrap">
-          <!-- lucide: building -->
-          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
-        </div>
-        <h3>On-premise</h3>
-        <div class="desc">On your own servers, behind your firewall.</div>
-        <div class="tags"><span>Your servers</span><span>Private</span></div>
-      </div>
-      <div class="feature-card">
-        <div class="icon-wrap">
-          <!-- lucide: server -->
-          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01"/><path d="M7 16.5h.01"/></svg>
-        </div>
-        <h3>Self-hosted</h3>
-        <div class="desc">Spin it up yourself, you own the whole stack.</div>
-        <div class="tags"><span>You own it</span><span>Portable</span></div>
-      </div>
-    </div>
-    <div class="pill-row" style="margin-top: 38px">
-      <span>Open source</span>
-      <span><em>600+</em> GitHub stars</span>
-      <span><em>20+</em> contributors</span>
-      <span>Public roadmap</span>
-    </div>
-  </section>
-
   <!-- ============= SLIDE 8d — Why Kitsu ============= -->
   <section class="slide" data-slide="8d" data-duration="11">
-    <div class="eyebrow">Coming from another tool?</div>
+    <div class="eyebrow">Coming from spreadsheets?</div>
     <h1>Why teams <em>switch</em></h1>
     <div class="features">
       <div class="feature-card">
@@ -1471,9 +1521,9 @@
     <div class="eyebrow">Studios and schools</div>
     <h1>Teams that ship with <em>Kitsu</em></h1>
     <div class="logo-grid">
+      <div class="logo-cell"><img class="sm" src="./assets/logo-blender.png" alt="" onerror="this.remove()"></div>
       <div class="logo-cell"><img class="big" src="./assets/logo-miyu.png" alt="" onerror="this.remove()"></div>
       <div class="logo-cell"><img class="big" src="./assets/logo-bobbypills.png" alt="" onerror="this.remove()"></div>
-      <div class="logo-cell"><img class="sm" src="./assets/logo-blender.png" alt="" onerror="this.remove()"></div>
       <div class="logo-cell"><img class="big" src="./assets/logo-fost.png" alt="" onerror="this.remove()"></div>
       <div class="logo-cell"><img src="./assets/logo-monello.png" alt="" onerror="this.remove()"></div>
       <div class="logo-cell"><img class="sm" src="./assets/logo-lofi.png" alt="" onerror="this.remove()"></div>
@@ -1504,12 +1554,12 @@
 
   <!-- ============= SLIDE 11b — Annecy 2026 nominations ============= -->
   <section class="slide" data-slide="11b" data-duration="7">
-    <div class="eyebrow">Annecy 2026 official selection</div>
+    <div class="eyebrow">Selected at Annecy 2026</div>
     <div class="poster-row">
       <div class="poster" style="--ph-a:#7a2f3a;--ph-b:#1a0c0e">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Feature</div></div><div class="silhouette"></div></div>
-        <img src="./assets/poster-carmen.jpg" alt="" onerror="this.remove()">
-        <div class="caption"><div class="title">Carmen</div><div class="sub">Tracked with Kitsu</div></div>
+        <img src="./assets/poster-brave-cat.jpg" alt="" onerror="this.remove()">
+        <div class="caption"><div class="title">Brave Cat</div><div class="sub">Tracked with Kitsu</div></div>
       </div>
       <div class="poster" style="--ph-a:#5e553a;--ph-b:#1a160c">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Feature</div></div><div class="silhouette"></div></div>
@@ -1528,8 +1578,8 @@
       </div>
       <div class="poster" style="--ph-a:#3a5e6e;--ph-b:#0c161a">
         <div class="placeholder"><div class="top"><div class="badge-tiny">Feature</div></div><div class="silhouette"></div></div>
-        <img src="./assets/poster-lucy-lost.jpg" alt="" onerror="this.remove()">
-        <div class="caption"><div class="title">Lucy Lost</div><div class="sub">Tracked with Kitsu</div></div>
+        <img src="./assets/poster-alice.jpg" alt="" onerror="this.remove()">
+        <div class="caption"><div class="title">La Fille dans les nuages</div><div class="sub">Tracked with Kitsu</div></div>
       </div>
     </div>
   </section>
@@ -1539,6 +1589,14 @@
     <div class="eyebrow">An update for our beloved users</div>
     <h1>What's new in <em>Kitsu</em></h1>
     <div class="news-grid">
+      <div class="news-item">
+        <div class="icon-wrap">
+          <!-- lucide: puzzle -->
+          <svg viewBox="0 0 24 24"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77a.98.98 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.979.979 0 0 1 .276-.837l1.61-1.61a2.404 2.404 0 0 1 1.705-.707 2.402 2.402 0 0 1 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></svg>
+        </div>
+        <h3>Plugin System</h3>
+        <p>Extend Kitsu with custom workflows, integrations and tools, built by your studio or the community.</p>
+      </div>
       <div class="news-item">
         <div class="icon-wrap">
           <!-- lucide: list-video -->
@@ -1555,14 +1613,6 @@
         <h3>Smart scheduling</h3>
         <p>Auto-assign tasks based on artist availability, skills and team load. Suggestions, not mandates.</p>
       </div>
-      <div class="news-item">
-        <div class="icon-wrap">
-          <!-- lucide: puzzle -->
-          <svg viewBox="0 0 24 24"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77a.98.98 0 0 1 .837-.276c.47.07.802.48.968.925a2.501 2.501 0 1 0 3.214-3.214c-.446-.166-.855-.497-.925-.968a.979.979 0 0 1 .276-.837l1.61-1.61a2.404 2.404 0 0 1 1.705-.707 2.402 2.402 0 0 1 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></svg>
-        </div>
-        <h3>Plugin System</h3>
-        <p>Extend Kitsu with custom workflows, integrations and tools, built by your studio or the community.</p>
-      </div>
     </div>
   </section>
 
@@ -1574,7 +1624,6 @@
         <div class="eyebrow-c">Come Talk To Us</div>
         <h2>See Kitsu live, <br>ask for a demo</h2>
         <div class="url">www.cg-wire.com/kitsu</div>
-        <div class="booth-line">Booth A.12</div>
       </div>
       <div class="contact-right">
         <div class="qr-frame">
