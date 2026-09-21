@@ -7,7 +7,6 @@ Single-file HTML slideshow that loops on the booth screen at Blender Conference 
 - `index.html` — the whole slideshow. CSS and JS are inline. No build, no framework, no npm.
 - `assets/` — image assets referenced by the slideshow. Most are placeholders to be replaced.
 - `design/` — reference design source (`slideshow-calm.html` + assets). Not shipped, not loaded by `index.html`. Treat as a frozen reference; live changes go in `index.html`.
-- `fmx-2025.pdf` — last year's deck, used as visual reference. Do not ship.
 
 ## How it runs
 
